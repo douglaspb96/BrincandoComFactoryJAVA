@@ -2,13 +2,19 @@
 public class Produto {
 	private String name;
 	private double price;
+	private Integer id;
 	
-	public Produto(String name, double price) {
+	public Produto(Integer id, String name, double price) {
 		super();
 		this.name = name;
 		this.price = price;
+		this.id = id;
 	}
 	
+	public Integer getId() {
+		return id;
+	}
+
 	public String getName() {
 		return name;
 	}
@@ -23,6 +29,6 @@ public class Produto {
 
 	@Override
 	public String toString() {
-		return "Produto [name=" + name + ", price=" + price + "]";
+		return "[ (#"+getId()+") " + getName() + ", R$ " + getPrice() + " ]";
 	}
 }

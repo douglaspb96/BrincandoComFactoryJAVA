@@ -6,6 +6,6 @@ public class App {
 		System.out.println(fp.criaProduto("Cenoura"));
 		System.out.println(fp.criaProduto("Maca"));
 		System.out.println(fp.criaProduto("Batata"));
-		System.out.println("Contador: "+FactoryProduto.count);
+		System.out.println("Contador: "+fp.count);
 	}
 }

@@ -1,22 +1,22 @@
 
 public class FactoryProduto {
 	public static FactoryProduto fp = null;
-	public static int count = 0;
+	public int count = 0;
 	private FactoryProduto() {}
 
 	public static FactoryProduto getInstance() {
 	    if (fp == null) {
 	    	fp = new FactoryProduto();
 	    }
-	    count++;
 	    return fp;
 	}
 	
 	public Produto criaProduto(String name) {
+		count++;
 		if(name.equals(Batata.class.getName())) {
-			return new Batata();
+			return new Batata(count);
 		}else if(name.equals(Cenoura.class.getName())) {
-			return new Cenoura();
+			return new Cenoura(count);
 		}
 		return null;
 	}

@@ -1,11 +1,11 @@
 
 public class Batata extends Produto {
-	public Batata() {
-		super(Batata.class.getName(), 5.99);
+	public Batata(Integer id) {
+		super(id, Batata.class.getName(), 5.99);
 	}
 	
 	@Override
 	public String toString() {
-		return "Batata [ Name =" + getName() + ", Price = " + getPrice() + " ]";
+		return "Batata = " + super.toString();
 	}
 }
